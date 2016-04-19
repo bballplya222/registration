@@ -1,4 +1,5 @@
 public class Course {
+
   private int department;
   private int courseNum;
   private String name;
@@ -39,4 +40,5 @@ public class Course {
   public Student[] getRoster() {
     return roster;
   }
+
 }
