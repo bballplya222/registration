@@ -14,10 +14,8 @@ public class Course {
 	private char day;
 	private int timeSlot; // this should be pulled from period object i think 
 	private int credits;
-	private int [] roster; //array language
-/* need 
- * constructor?
- */ 
+	private String roster[]=new String [20]; //array language
+
 	public void Course (int department, int courseNum, String name, char day, int timeSlot, int credits) {
     this.department = department;
     this.courseNum = courseNum;
@@ -42,6 +40,8 @@ public class Course {
     return credits;
   }
   public Student[] getRoster(){
-    return roster
+    return roster;
   }
+  /* need public String toString() and public boolean equals ()
+  */
 }
