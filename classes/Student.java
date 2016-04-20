@@ -5,7 +5,7 @@ public class Student{
   private int gradYear;
   private Course schedule[]= new Course [6];
 
-  public void Student (String firstName, String lastName, int id, int gradYear){
+  public Student (String firstName, String lastName, int id, int gradYear){
     this.firstName=firstName;
     this.lastName=lastName;
     this.id=id;

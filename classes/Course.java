@@ -4,11 +4,11 @@ public class Course {
 	private int courseNum;
 	private String name;
 	private char day;
-	private int timeSlot; // this should be pulled from period object i think 
+	private Period timeSlot; // this should be pulled from period object i think 
 	private int credits;
-	private String roster[] = new String [20]; //array language
+	private Student roster[] = new Student [20]; //array language
 
-  public void Course(int department, int courseNum, String name, char day, int timeSlot, int credits) {
+  public Course(int department, int courseNum, String name, char day, int timeSlot, int credits) {
     this.department = department;
     this.courseNum = courseNum;
     this.name = name;

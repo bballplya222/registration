@@ -2,7 +2,7 @@ public class Period{
   private int timeSlot;
   private char day;
 // need to reevaluate this constructor and how it'll work with the rest of the program? 
-  public void Period(char day, int timeSlot){
+  public Period(char day, int timeSlot){
     this.day= day;
     this. timeSlot= timeSlot;
   }
