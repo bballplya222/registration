@@ -1,10 +1,12 @@
+package registration.classes;
+
 public class Course {
 
 	private int department;
 	private int courseNum;
 	private String name;
 	private char day;
-	private Period timeSlot; // this should be pulled from period object i think 
+	private int timeSlot; // this should be pulled from period object i think 
 	private int credits;
 	private Student roster[] = new Student [20]; //array language
 
@@ -29,7 +31,7 @@ public class Course {
     return name;
   }
 
-  public Period getPeriod() {
+  public int getPeriod() {
     return timeSlot; //this is supposed to return the period
   }
 
