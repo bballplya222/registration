@@ -1,5 +1,4 @@
 package registration.classes;
-
 public class Period{
   private int timeSlot;
   private char day;
@@ -8,14 +7,35 @@ public class Period{
     this.day= day;
     this.timeSlot= timeSlot;
   }
-  public char GetDay(){
+  public char getDay(){
     return day;
   }
-  public int GetTimeSlot(){
+  public int getTimeSlot(){
     return timeSlot;
   }
   public String toString(){
-    return ""+this.day+this.timeSlot; //check this before submitting
+    return ""+day+timeSlot; //check this before submitting
   }
-  // need compare to method, Java has this built in....?
+  public int compareTo(Period other){
+	  String week= "MTWHFS";
+	  if (week.indexOf(day)>week.indexOf(other.day)){
+		  return 1;
+	  }
+	  else if (week.indexOf(day)<week.indexOf(other.day)){
+		  return -1;
+	  }
+	  else {
+		  if (timeSlot>other.timeSlot){
+			  return 1;
+		  }
+		  else if (timeSlot<other.timeSlot){
+		 return -1; }
+		  else{
+			  return 0;
+		  }
+		  
+	  }
+	  
+  }
 }
+

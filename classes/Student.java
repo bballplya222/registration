@@ -31,9 +31,13 @@ public class Student{
   }
 
   public String toString(){
-    return id+":"+lastName+","+firstName+"-"+gradYear;//not sure if return will work like this
+    return id+": "+lastName+", "+firstName+" - "+gradYear;//not sure if return will work like this
   }
-
-  //need public boolean equals(Student other)
-  
+  public boolean equals(Student other){
+    if (id==other.id){
+      return true;
+    }else{
+      return false;
+    }
+    }
 }
