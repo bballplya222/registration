@@ -1,3 +1,5 @@
+package registration.classes;
+
 
 public class Course {
 
@@ -8,7 +10,6 @@ public class Course {
 	private int timeSlot; // this should be pulled from period object i think 
 	private int credits;
 	private Student roster[] = new Student [20];
-	private Period p;
 
 	public Course(int department, int courseNum, String name, char day, int timeSlot, int credits) {
     this.department = department;
@@ -32,7 +33,7 @@ public class Course {
   }
 
   public Period getPeriod() {
-    return p; //this is supposed to return the period
+    return new Period (day, timeSlot); //this is supposed to return the period
   }
 
   public int getCredits() {
@@ -43,7 +44,7 @@ public class Course {
     return roster;
   }
   public String toString(){
-	  return department+":"+courseNum+" ["+name+"]"+p+" credits:"+credits;
+	  return department+":"+courseNum+" ["+name+"] "+ getPeriod() +" credits:"+credits;
   }
   public boolean equals(Course other){
 	  if (courseNum==other.courseNum && department==other.department){
